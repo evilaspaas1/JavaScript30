@@ -12,6 +12,7 @@
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
+    const team = players;
     // and we want to make a copy of it.
 
     // You might think we can just do something like this:
@@ -45,6 +46,9 @@
     // and think we make a copy:
 
     // how do we take a copy instead?
+
+    const copy = Object.assign({}, person, { number: 23, age 72 });
+    console.log(copy)
 
     // We will hopefully soon see the object ...spread
 
