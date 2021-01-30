@@ -38,25 +38,25 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
 
-    const filter_collection = investors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
-    console.table(filter_collection);
+    const filterCollection = investors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
+    console.table(filterCollection);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
 
-    const map_collection = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
-    console.table(map_collection)
+    const mapCollection = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    console.table(mapCollection)
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
-    const sort_collection = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
-    console.table(sort_collection);
+    const sortCollection = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
+    console.table(sortCollection);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
 
-    const reduce_collection = inventors.reduce((total, inventor) => {
+    const reduceCollection = inventors.reduce((total, inventor) => {
       return total + (inventor.passed - inventor.year);
     },0);
 
@@ -76,18 +76,18 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
-    const sort_collection2 = people.sort((a, b) => {
+    const sortCollection2 = people.sort((a, b) => {
       const [aLast, aFirst] = a.split(', ');
       const [bLast, bFirst] = b.split(', ');
       return aLast > bLast ? 1 : -1;
     });
-    console.table(sort_collection2);
+    console.table(sortCollection2);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    const reduce_collection2 = data.reduce(function(obj, item) {
+    const reduceCollection2 = data.reduce(function(obj, item) {
       if (!obj[item]) {
         obj[item] = 0;
       }
@@ -95,7 +95,7 @@
       return obj;
     }, {});
 
-    console.table(reduce_collection2);
+    console.table(reduceCollection2);
 
   </script>
 </body>
